@@ -1,0 +1,19 @@
+{
+  "name": "vulnerable-feedback-frontend",
+  "version": "1.0.0",
+  "description": "React customer feedback UI with intentional vulnerabilities for Snyk demo use only.",
+  "scripts": {
+    "start": "vite --host 0.0.0.0",
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "axios": "0.21.1",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
+}
