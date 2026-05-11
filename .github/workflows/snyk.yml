@@ -1,4 +1,4 @@
-name: Snyk Demo Scan
+name: Snyk Scan
 
 on:
   workflow_dispatch:
