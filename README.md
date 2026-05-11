@@ -1,8 +1,8 @@
 # SignalVoice Vulnerable Customer Feedback App
 
-A fully working Dockerized React + Node/Express + PostgreSQL customer feedback application created for local Snyk / AppSec demo use.
+A fully working Dockerized React + Node/Express + PostgreSQL customer feedback application created for AppSec demo use.
 
-> **Important:** This project intentionally contains security vulnerabilities. Use it only on your local machine for training, demos, or interview preparation. Do not deploy it to production or any shared environment.
+> **Important:** This project intentionally contains security vulnerabilities. Use it only on your local machine. Do not deploy it to production or any shared environment.
 
 ## What it includes
 
@@ -13,7 +13,7 @@ A fully working Dockerized React + Node/Express + PostgreSQL customer feedback a
 - Admin feedback inbox
 - Professional React UI
 - Docker Compose local build
-- Intentional vulnerabilities for Snyk findings
+- Intentional vulnerabilities for SAST/SCA tools
 
 ## Run locally
 
@@ -42,8 +42,6 @@ Password: hideme
 
 ## Intentional vulnerabilities included
 
-These are included for Snyk Code, Snyk Open Source, and demo storytelling:
-
 - Hardcoded admin credentials in `backend/src/server.js`
 - Hardcoded JWT secret in `backend/src/server.js`
 - SQL injection patterns in `POST /api/feedback`
@@ -53,34 +51,5 @@ These are included for Snyk Code, Snyk Open Source, and demo storytelling:
 - Vulnerable/old backend dependencies such as `lodash@4.17.11`
 - Old PostgreSQL base image via Docker Compose
 
-## Demo narrative
 
-This app works well for a Snyk final-round presentation because it gives you:
 
-1. A realistic customer-facing app.
-2. A high-risk administration surface.
-3. AI-generated-code discussion points.
-4. Findings across code, dependencies, containers, and secrets.
-5. A clean business story: customer feedback is sensitive and should be protected.
-
-## Suggested Snyk workflow
-
-```bash
-snyk auth
-snyk test --all-projects
-snyk code test
-snyk container test postgres:12
-```
-
-You can also connect the GitHub repo to Snyk and enable PR checks.
-
-## Safe remediation talking points
-
-For the interview, explain that the secure version would:
-
-- Move admin credentials and JWT secrets into a secret manager.
-- Replace raw SQL string interpolation with parameterized queries.
-- Sanitize or encode user-supplied content before rendering.
-- Restrict CORS to trusted origins.
-- Upgrade vulnerable dependencies.
-- Add RBAC and audit logging for admin actions.
