@@ -64,15 +64,33 @@ input:focus, textarea:focus, select:focus { border-color: #2855ff; box-shadow: 0
 .stat-card strong { display: block; margin-top: 8px; font-size: 28px; }
 .toolbar { display: grid; grid-template-columns: 1fr 180px 180px 100px; gap: 12px; padding: 16px; margin-bottom: 18px; }
 .toolbar input, .toolbar select { margin-top: 0; }
+.admin-main-grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 18px; align-items: start; }
 .feedback-list { display: grid; gap: 16px; }
 .feedback-item { padding: 22px; }
 .item-header { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #edf1f7; padding-bottom: 14px; margin-bottom: 14px; }
 .item-header h3 { margin: 0 0 4px; }
 .item-header span, time { color: #667085; font-size: 14px; }
 .message { color: #344054; line-height: 1.65; }
+.assistant-panel { position: sticky; top: 24px; padding: 18px; border-radius: 22px; }
+.assistant-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.assistant-heading span { color: #2855ff; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.assistant-heading h2 { margin: 4px 0 0; font-size: 22px; }
+.assistant-dot { width: 12px; height: 12px; border-radius: 50%; background: #12b76a; box-shadow: 0 0 0 6px rgba(18,183,106,.12); }
+.chat-window { min-height: 280px; max-height: 420px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding: 12px; border-radius: 18px; background: #f6f8fb; border: 1px solid #edf1f7; }
+.chat-message { width: fit-content; max-width: 100%; white-space: pre-wrap; line-height: 1.55; font-size: 14px; padding: 11px 13px; border-radius: 16px; }
+.chat-message.assistant { color: #26364a; background: white; border: 1px solid #e4eaf3; }
+.chat-message.admin { align-self: flex-end; color: white; background: #2855ff; }
+.suggestion-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.suggestion-chip { border: 1px solid #d7deea; border-radius: 999px; padding: 8px 10px; color: #344054; background: white; cursor: pointer; font-size: 12px; font-weight: 700; }
+.suggestion-chip:hover { border-color: #2855ff; color: #2855ff; }
+.assistant-form { display: grid; grid-template-columns: minmax(0, 1fr) 74px; gap: 10px; }
+.assistant-form input { margin-top: 0; }
+.assistant-form .primary-button { padding: 13px 12px; }
+.primary-button:disabled { opacity: .65; cursor: not-allowed; }
 @media (max-width: 900px) {
   .hero-grid, .admin-shell { grid-template-columns: 1fr; }
   .sidebar { display: none; }
-  .stat-grid, .toolbar { grid-template-columns: 1fr; }
+  .stat-grid, .toolbar, .admin-main-grid { grid-template-columns: 1fr; }
+  .assistant-panel { position: static; }
   .metric-row { flex-direction: column; }
 }

@@ -120,6 +120,89 @@ function AdminLogin({ onLogin, onBack }) {
   );
 }
 
+function FeedbackAssistant({ headers }) {
+  const [question, setQuestion] = useState('');
+  const [messages, setMessages] = useState([
+    {
+      role: 'assistant',
+      text: 'Ask me about saved feedback records, recent submissions, themes, sentiment, or a specific customer.'
+    }
+  ]);
+  const [loading, setLoading] = useState(false);
+
+  const askAssistant = async (event) => {
+    event.preventDefault();
+    const trimmedQuestion = question.trim();
+    if (!trimmedQuestion || loading) return;
+
+    setMessages((current) => [...current, { role: 'admin', text: trimmedQuestion }]);
+    setQuestion('');
+    setLoading(true);
+
+    try {
+      const response = await axios.post(`${API_BASE}/admin/assistant`, { question: trimmedQuestion }, { headers });
+      const sourceText = response.data.sources?.length
+        ? `\n\nReferenced ${response.data.sources.length} feedback record${response.data.sources.length === 1 ? '' : 's'}.`
+        : '';
+      setMessages((current) => [...current, { role: 'assistant', text: `${response.data.answer}${sourceText}` }]);
+    } catch (err) {
+      setMessages((current) => [
+        ...current,
+        { role: 'assistant', text: err.response?.data?.details || 'I could not analyze the feedback records right now.' }
+      ]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const suggestions = [
+    'Summarize the latest feedback',
+    'What are the common themes?',
+    'How many records are saved?',
+    'Which feedback needs attention?'
+  ];
+
+  return (
+    <section className="assistant-panel card">
+      <div className="assistant-heading">
+        <div>
+          <span>AI Assistant</span>
+          <h2>Ask about feedback</h2>
+        </div>
+        <div className="assistant-dot" />
+      </div>
+
+      <div className="chat-window" aria-live="polite">
+        {messages.map((message, index) => (
+          <div className={`chat-message ${message.role}`} key={`${message.role}-${index}`}>
+            {message.text}
+          </div>
+        ))}
+        {loading && <div className="chat-message assistant">Reviewing the saved feedback records...</div>}
+      </div>
+
+      <div className="suggestion-row">
+        {suggestions.map((suggestion) => (
+          <button className="suggestion-chip" key={suggestion} type="button" onClick={() => setQuestion(suggestion)}>
+            {suggestion}
+          </button>
+        ))}
+      </div>
+
+      <form className="assistant-form" onSubmit={askAssistant}>
+        <input
+          value={question}
+          onChange={(e) => setQuestion(e.target.value)}
+          placeholder="Ask a question about the saved feedback..."
+        />
+        <button className="primary-button" type="submit" disabled={loading}>
+          Ask
+        </button>
+      </form>
+    </section>
+  );
+}
+
 function AdminDashboard({ token, onLogout }) {
   const [items, setItems] = useState([]);
   const [stats, setStats] = useState(null);
@@ -192,20 +275,24 @@ function AdminDashboard({ token, onLogout }) {
 
         {error && <div className="status error">{error}</div>}
 
-        <div className="feedback-list">
-          {items.map((item) => (
-            <article className="card feedback-item" key={item.id}>
-              <div className="item-header">
-                <div>
-                  {/* Intentionally vulnerable: unsafe admin rendering of user-supplied fields for XSS demo. */}
-                  <h3 dangerouslySetInnerHTML={{ __html: item.name }} />
-                  <span dangerouslySetInnerHTML={{ __html: item.email }} />
+        <div className="admin-main-grid">
+          <div className="feedback-list">
+            {items.map((item) => (
+              <article className="card feedback-item" key={item.id}>
+                <div className="item-header">
+                  <div>
+                    {/* Intentionally vulnerable: unsafe admin rendering of user-supplied fields for XSS demo. */}
+                    <h3 dangerouslySetInnerHTML={{ __html: item.name }} />
+                    <span dangerouslySetInnerHTML={{ __html: item.email }} />
+                  </div>
+                  <time>{new Date(item.created_at).toLocaleString()}</time>
                 </div>
-                <time>{new Date(item.created_at).toLocaleString()}</time>
-              </div>
-              <div className="message" dangerouslySetInnerHTML={{ __html: item.message }} />
-            </article>
-          ))}
+                <div className="message" dangerouslySetInnerHTML={{ __html: item.message }} />
+              </article>
+            ))}
+          </div>
+
+          <FeedbackAssistant headers={headers} />
         </div>
       </section>
     </main>
