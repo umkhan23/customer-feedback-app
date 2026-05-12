@@ -1,0 +1,2740 @@
+﻿{
+  "vulnerabilities": [
+    {
+      "id": "SNYK-JS-AXIOS-12613773",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P",
+      "credit": [
+        "Ameer Assadi"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.30.0",
+          ">=1.0.0-alpha.1 <1.12.0"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.30.0",
+        "1.12.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 6.9,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/945435fc51467303768202250debb8d4ae892593",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2025-09-13T14:04:22.537532Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.9,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-03-31T12:55:43.829981Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-03-31T12:55:43.829981Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2025-09-13T14:04:22.537532Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling via the `data:` URL handler. An attacker can trigger a denial of service by crafting a `data:` URL with an excessive payload, causing allocation of memory for content decoding before verifying content size limits.\n## Remediation\nUpgrade `axios` to version 0.30.0, 1.12.0 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/945435fc51467303768202250debb8d4ae892593)\n",
+      "epssDetails": {
+        "percentile": "0.34669",
+        "probability": "0.00144",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2025-58754"
+        ],
+        "CWE": [
+          "CWE-770"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2025-09-11T09:03:18.471400Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2025-09-10T15:42:52Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2025-09-11T09:14:42.191601Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-03-31T12:55:43.829981Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.30.0"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-15252993",
+      "title": "Prototype Pollution",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P",
+      "credit": [
+        "Bart┼éomiej Dmitruk"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.30.3",
+          ">=1.0.0-alpha.1 <1.13.5"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.30.3",
+        "1.13.5"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/28c721588c7a77e7503d0a434e016f852c597b57",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/pull/7369",
+          "title": "GitHub PR"
+        },
+        {
+          "url": "https://github.com/axios/axios/releases/tag/v1.13.5",
+          "title": "GitHub Release"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-02-12T05:42:15.361218Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-05-07T14:03:22.362550Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-07T14:03:22.362550Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-02-12T05:42:15.361218Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Prototype Pollution via the `mergeConfig` function. An attacker can cause the application to crash by supplying a malicious configuration object containing a `__proto__` property, typically by leveraging `JSON.parse()`.\n## PoC\n```js\r\nimport axios from \"axios\";\r\n\r\nconst maliciousConfig = JSON.parse('{\"__proto__\": {\"x\": 1}}');\r\nawait axios.get(\"https://domain/get\", maliciousConfig);\r\n```\n\n## Details\n\nPrototype Pollution is a vulnerability affecting JavaScript. Prototype Pollution refers to the ability to inject properties into existing JavaScript language construct prototypes, such as objects. JavaScript allows all Object attributes to be altered, including their magical attributes such as `__proto__`, `constructor` and `prototype`. An attacker manipulates these attributes to overwrite, or pollute, a JavaScript application object prototype of the base object by injecting other values.  Properties on the `Object.prototype` are then inherited by all the JavaScript objects through the prototype chain. When that happens, this leads to either denial of service by triggering JavaScript exceptions, or it tampers with the application source code to force the code path that the attacker injects, thereby leading to remote code execution.\n\nThere are two main ways in which the pollution of prototypes occurs:\n\n-   Unsafe `Object` recursive merge\n    \n-   Property definition by path\n    \n\n### Unsafe Object recursive merge\n\nThe logic of a vulnerable recursive merge function follows the following high-level model:\n```\nmerge (target, source)\n\n  foreach property of source\n\n    if property exists and is an object on both the target and the source\n\n      merge(target[property], source[property])\n\n    else\n\n      target[property] = source[property]\n```\n<br>  \n\nWhen the source object contains a property named `__proto__` defined with `Object.defineProperty()` , the condition that checks if the property exists and is an object on both the target and the source passes and the merge recurses with the target, being the prototype of `Object` and the source of `Object` as defined by the attacker. Properties are then copied on the `Object` prototype.\n\nClone operations are a special sub-class of unsafe recursive merges, which occur when a recursive merge is conducted on an empty object: `merge({},source)`.\n\n`lodash` and `Hoek` are examples of libraries susceptible to recursive merge attacks.\n\n### Property definition by path\n\nThere are a few JavaScript libraries that use an API to define property values on an object based on a given path. The function that is generally affected contains this signature: `theFunction(object, path, value)`\n\nIf the attacker can control the value of ΓÇ£pathΓÇ¥, they can set this value to `__proto__.myValue`. `myValue` is then assigned to the prototype of the class of the object.\n\n## Types of attacks\n\nThere are a few methods by which Prototype Pollution can be manipulated:\n\n| Type |Origin  |Short description |\n|--|--|--|\n| **Denial of service (DoS)**|Client  |This is the most likely attack. <br>DoS occurs when `Object` holds generic functions that are implicitly called for various operations (for example, `toString` and `valueOf`). <br> The attacker pollutes `Object.prototype.someattr` and alters its state to an unexpected value such as `Int` or `Object`. In this case, the code fails and is likely to cause a denial of service.  <br>**For example:** if an attacker pollutes `Object.prototype.toString` by defining it as an integer, if the codebase at any point was reliant on `someobject.toString()` it would fail. |\n |**Remote Code Execution**|Client|Remote code execution is generally only possible in cases where the codebase evaluates a specific attribute of an object, and then executes that evaluation.<br>**For example:** `eval(someobject.someattr)`. In this case, if the attacker pollutes `Object.prototype.someattr` they are likely to be able to leverage this in order to execute code.|\n|**Property Injection**|Client|The attacker pollutes properties that the codebase relies on for their informative value, including security properties such as cookies or tokens.<br>  **For example:** if a codebase checks privileges for `someuser.isAdmin`, then when the attacker pollutes `Object.prototype.isAdmin` and sets it to equal `true`, they can then achieve admin privileges.|\n\n## Affected environments\n\nThe following environments are susceptible to a Prototype Pollution attack:\n\n-   Application server\n    \n-   Web server\n\n-   Web browser\n    \n\n## How to prevent\n\n1.  Freeze the prototypeΓÇö use `Object.freeze (Object.prototype)`.\n    \n2.  Require schema validation of JSON input.\n    \n3.  Avoid using unsafe recursive merge functions.\n    \n4.  Consider using objects without prototypes (for example, `Object.create(null)`), breaking the prototype chain and preventing pollution.\n    \n5.  As a best practice use `Map` instead of `Object`.\n\n### For more information on this vulnerability type:\n\n[Arteau, Olivier. ΓÇ£JavaScript prototype pollution attack in NodeJS application.ΓÇ¥ GitHub, 26 May 2018](https://github.com/HoLyVieR/prototype-pollution-nsec18/blob/master/paper/JavaScript_prototype_pollution_attack_in_NodeJS.pdf)\n\n## Remediation\nUpgrade `axios` to version 0.30.3, 1.13.5 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/28c721588c7a77e7503d0a434e016f852c597b57)\n- [GitHub PR](https://github.com/axios/axios/pull/7369)\n- [GitHub Release](https://github.com/axios/axios/releases/tag/v1.13.5)\n",
+      "epssDetails": {
+        "percentile": "0.16528",
+        "probability": "0.00053",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-25639"
+        ],
+        "CWE": [
+          "CWE-1321"
+        ],
+        "GHSA": [
+          "GHSA-43fc-jf86-j433"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-02-10T09:21:34.642158Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-02-09T20:53:59Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-02-10T10:00:52.149660Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-07T14:03:22.362550Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.30.3"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-1579269",
+      "title": "Regular Expression Denial of Service (ReDoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P",
+      "credit": [
+        "ready-research"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.21.3"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.21.3"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/5b457116e31db0e88fede6c428e969e87f290929",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2024-03-11T09:51:35.929875Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2024-03-11T09:53:53.674492Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T14:02:28.888908Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "NVD",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-03-11T09:51:35.929875Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-03-11T09:53:53.674492Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) via the `trim` function.\r\n\r\n## PoC\r\n```\r\n// poc.js\r\n\r\nvar {trim} = require(\"axios/lib/utils\");\r\n\r\nfunction build_blank (n) {\r\nvar ret = \"1\"\r\nfor (var i = 0; i < n; i++) {\r\nret += \" \"\r\n}\r\n\r\nreturn ret + \"1\";\r\n}\r\n\r\nvar time = Date.now();\r\ntrim(build_blank(50000))\r\nvar time_cost = Date.now() - time;\r\nconsole.log(\"time_cost: \" + time_cost)\r\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLetΓÇÖs take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesnΓÇÖt match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `axios` to version 0.21.3 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/5b457116e31db0e88fede6c428e969e87f290929)\n",
+      "epssDetails": {
+        "percentile": "0.92589",
+        "probability": "0.08894",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-3749"
+        ],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2021-09-01T10:21:55.102099Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2021-09-01T10:17:45Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2021-09-01T16:08:42.935317Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-05T14:02:28.888908Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.21.3"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-15965856",
+      "title": "Unintended Proxy or Intermediary ('Confused Deputy')",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N/E:P",
+      "credit": [
+        "Ameer Assadi"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.0",
+          ">=1.0.0 <1.15.0"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.31.0",
+        "1.15.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 6.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-3p68-rc4w-qgx5",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/fb3befb6daac6cad26b2e54094d0f2d9e47f24df",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/releases/tag/v1.15.0",
+          "title": "GitHub Release"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "critical",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:L",
+          "cvssV3BaseScore": 9.9,
+          "modificationTime": "2026-04-15T01:14:13.504040Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L",
+          "cvssV3BaseScore": 7,
+          "modificationTime": "2026-04-13T20:29:00.422563Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-05-11T14:04:07.404728Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-11T14:04:07.404728Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:L",
+          "assigner": "NVD",
+          "severity": "critical",
+          "baseScore": 9.9,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-15T01:14:13.504040Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:L",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-13T20:29:00.422563Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Unintended Proxy or Intermediary ('Confused Deputy') via improper hostname normalization in the `NO_PROXY` environment variable. An attacker controlling request URLs can access internal or loopback services by crafting requests (with a trailing dot or `[::1]`) that bypass proxy restrictions, causing sensitive requests to be routed through an unintended proxy.\r\n\r\n**Note:**\r\n\r\nThis is only exploitable if the application relies on `NO_PROXY=localhost,127.0.0.1,::1` for protecting loopback/internal access.\n## Remediation\nUpgrade `axios` to version 0.31.0, 1.15.0 or higher.\n## References\n- [GitHub Advisory](https://github.com/axios/axios/security/advisories/GHSA-3p68-rc4w-qgx5)\n- [GitHub Commit](https://github.com/axios/axios/commit/fb3befb6daac6cad26b2e54094d0f2d9e47f24df)\n- [GitHub Release](https://github.com/axios/axios/releases/tag/v1.15.0)\n",
+      "epssDetails": {
+        "percentile": "0.14433",
+        "probability": "0.00047",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2025-62718"
+        ],
+        "CWE": [
+          "CWE-441"
+        ],
+        "GHSA": [
+          "GHSA-3p68-rc4w-qgx5"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-10T09:27:47.216215Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-09T16:14:43Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-10T09:27:47.438305Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-11T14:04:07.404728Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.0"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-15969258",
+      "title": "HTTP Response Splitting",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:L",
+      "credit": [
+        "raulvdv"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.0",
+          ">=1.0.0 <1.15.0"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "0.31.0",
+        "1.15.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "high",
+      "cvssScore": 7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/363185461b90b1b78845dc8a99a1f103d9b122a1",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/pull/10688/changes/24c45391b6529404fa59e8c2e5089098d58ee902",
+          "title": "GitHub Commit (v1 backport)"
+        },
+        {
+          "url": "https://github.com/axios/axios/pull/10660",
+          "title": "GitHub PR"
+        },
+        {
+          "url": "https://github.com/axios/axios/releases/tag/v1.15.0",
+          "title": "GitHub Release"
+        },
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-fvcv-3m26-pcqx",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "critical",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+          "cvssV3BaseScore": 9,
+          "modificationTime": "2026-04-15T09:11:08.217713Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "cvssV3BaseScore": 4.8,
+          "modificationTime": "2026-04-22T01:19:10.977955Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:H/SI:H/SA:L",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-04-22T01:19:10.977955Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:L",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.9,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-22T01:19:10.977955Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+          "assigner": "Red Hat",
+          "severity": "critical",
+          "baseScore": 9,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-15T09:11:08.217713Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-22T01:19:10.977955Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to HTTP Response Splitting via the `parseTokens` header processing path in `lib/core/AxiosHeaders.js`. An attacker can smuggle HTTP requests or inject arbitrary headers by supplying a header value containing `\\r\\n`, which Axios merges into an outbound request. Under specific conditions, this can be used to exfiltrate cloud metadata tokens, pivot into internal services, or poison downstream HTTP traffic.\r\n\r\n**Notes**\r\n\r\n- Exploitation requires prior successful prototype pollution in a third-party dependency, enabling attacker-controlled header data to flow into Axios via configuration merging or `AxiosHeaders.set(...)`.\r\n- IMDSv2 token exfiltration (described in the original vulnerability report as another step in the exploit chain following the smuggling of a `PUT` request) further depends on the application running in an AWS environment with instance metadata access enabled, and on the Axios process having network access to the metadata endpoint.\r\n- A possible but uncommon vector mentioned in the maintainers' advisory relies on the use of a non standard Axios transport mechanism, e.g. a custom adapter, to bypass Node.js header validation, thereby permitting malformed or injected header values to be transmitted without rejection. In most cases, this vector is blocked by Node.JS's built in header validation.\n## Remediation\nUpgrade `axios` to version 0.31.0, 1.15.0 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/363185461b90b1b78845dc8a99a1f103d9b122a1)\n- [GitHub Commit (v1 backport)](https://github.com/axios/axios/pull/10688/changes/24c45391b6529404fa59e8c2e5089098d58ee902)\n- [GitHub PR](https://github.com/axios/axios/pull/10660)\n- [GitHub Release](https://github.com/axios/axios/releases/tag/v1.15.0)\n- [Maintainer's Advisory](https://github.com/axios/axios/security/advisories/GHSA-fvcv-3m26-pcqx)\n",
+      "epssDetails": {
+        "percentile": "0.07235",
+        "probability": "0.00026",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-40175"
+        ],
+        "CWE": [
+          "CWE-113"
+        ],
+        "GHSA": [
+          "GHSA-fvcv-3m26-pcqx"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-10T20:57:02.054109Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-10T20:08:52Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-10T20:57:02.293998Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-04-22T01:19:10.977955Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.0"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-16298055",
+      "title": "Improper Encoding or Escaping of Output",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N/E:P",
+      "credit": [
+        "August829"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.1",
+          ">=1.0.0 <1.15.1"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.31.1",
+        "1.15.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 6.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/44bca902e1bdd7dd6490c7b4985b63e729b0e634",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/5266af94540552e99079caa66bb241bf35b42051",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-xhjh-pmcv-23jw",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-04-27T14:00:23.369253Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "low",
+          "baseScore": 3.7,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-27T14:00:23.369253Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Improper Encoding or Escaping of Output through the `encode` function in `AxiosURLSearchParams`. An attacker can smuggle a NUL byte into serialized query strings by supplying crafted parameter values, causing downstream parsers or backend components to misinterpret the request and potentially truncate or alter parameter handling.\r\n\r\n**Notes:** Standard axios request flow (`buildURL`) uses its own encode function, which does NOT have this bug. Only triggered via direct `AxiosURLSearchParams.toString()` without an encoder, or via custom `paramsSerializer` delegation\n## Remediation\nUpgrade `axios` to version 0.31.1, 1.15.1 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/44bca902e1bdd7dd6490c7b4985b63e729b0e634)\n- [GitHub Commit](https://github.com/axios/axios/commit/5266af94540552e99079caa66bb241bf35b42051)\n- [Maintainer's Advisory](https://github.com/axios/axios/security/advisories/GHSA-xhjh-pmcv-23jw)\n",
+      "epssDetails": {
+        "percentile": "0.13278",
+        "probability": "0.00044",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-42040"
+        ],
+        "CWE": [
+          "CWE-116"
+        ],
+        "GHSA": [
+          "GHSA-xhjh-pmcv-23jw"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-26T07:50:03.695717Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-24T19:21:11Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-26T07:50:03.905585Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-04-27T14:00:23.369253Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-16298058",
+      "title": "HTTP Response Splitting",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N/E:P",
+      "credit": [
+        "raulvdv"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.1",
+          ">=1.0.0 <1.15.1"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.31.1",
+        "1.15.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "critical",
+      "cvssScore": 9.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/37cf18f2e2c10171ddd851c8e46938d48cc35948",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/e3ddeb40f6a142a234925341151e2ca631a6de64",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-6chq-wfr3-2hj9",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "cvssV3BaseScore": 7.4,
+          "modificationTime": "2026-05-01T06:31:08.401056Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "critical",
+          "baseScore": 9.1,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-05-01T06:31:08.401056Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-01T06:31:08.401056Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-01T06:31:08.401056Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to HTTP Response Splitting via the `isFormData` and `getHeaders` handling in the HTTP request path. An attacker can inject arbitrary request headers by supplying a prototype-polluted object that is mistaken for `FormData`, causing `getHeaders()` output to be merged into an outgoing request.\r\nThis lets attacker-controlled values, such as `authorization` or custom headers, ride along with requests made by applications that pass untrusted objects into Axios, exposing credentials or altering server-side request handling.\r\n\r\n**Notes**\r\n- The gadget only matters when the request body is a non-`FormData` payload that Axios still routes through the Node HTTP adapterΓÇÖs form-data detection path; browser-side usage is not implicated by this code path.\r\n- The advisoryΓÇÖs prototype-pollution prerequisite can come from any dependency in the applicationΓÇÖs tree, not necessarily from Axios itself, so a separate merge/parser bug elsewhere can be enough to trigger the header injection.\n## Remediation\nUpgrade `axios` to version 0.31.1, 1.15.1 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/37cf18f2e2c10171ddd851c8e46938d48cc35948)\n- [GitHub Commit](https://github.com/axios/axios/commit/e3ddeb40f6a142a234925341151e2ca631a6de64)\n- [Maintainer's Advisory](https://github.com/axios/axios/security/advisories/GHSA-6chq-wfr3-2hj9)\n",
+      "epssDetails": {
+        "percentile": "0.24061",
+        "probability": "0.00083",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-42035"
+        ],
+        "CWE": [
+          "CWE-113"
+        ],
+        "GHSA": [
+          "GHSA-6chq-wfr3-2hj9"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-26T08:14:36.367251Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-24T19:20:20Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-26T08:14:36.555529Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-01T06:31:08.401056Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "critical",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-16298095",
+      "title": "Server-side Request Forgery (SSRF)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "credit": [
+        "srisowmya2000"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.1",
+          ">=1.0.0 <1.15.1"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "0.31.1",
+        "1.15.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 6.9,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/03cdfc99e8db32a390e12128208b6778492cee9c",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/163da7226fd2cd21f0f238f99b2f75a51bf9b2a3",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-m7pr-hjqh-92cm",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-04-28T01:14:59.883791Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.8,
+          "modificationTime": "2026-05-01T12:20:45.436960Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.9,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-05-01T12:20:45.436960Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-01T12:20:45.436960Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "assigner": "NVD",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-28T01:14:59.883791Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 6.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-01T12:20:45.436960Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Server-side Request Forgery (SSRF) through the `AxiosHeaders` normalization path and `shouldBypassProxy` helper. An attacker can smuggle CRLF and other control characters into request header values by supplying crafted header input, causing injected header fields to be sent on outbound requests and potentially altering how downstream servers interpret the request; in proxy configurations, a request to `localhost`, `127.0.0.1`, or `::1` can be routed differently depending on the `no_proxy` entry, allowing loopback traffic to bypass the intended proxy handling.\n## Remediation\nUpgrade `axios` to version 0.31.1, 1.15.1 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/03cdfc99e8db32a390e12128208b6778492cee9c)\n- [GitHub Commit](https://github.com/axios/axios/commit/163da7226fd2cd21f0f238f99b2f75a51bf9b2a3)\n- [Maintainer's Advisory](https://github.com/axios/axios/security/advisories/GHSA-m7pr-hjqh-92cm)\n",
+      "epssDetails": {
+        "percentile": "0.13208",
+        "probability": "0.00044",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-42038"
+        ],
+        "CWE": [
+          "CWE-918"
+        ],
+        "GHSA": [
+          "GHSA-m7pr-hjqh-92cm"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-26T08:40:56.894407Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-24T19:19:57Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-26T08:40:57.118068Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-01T12:20:45.436960Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-16298130",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P",
+      "credit": [
+        "asadeddin"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.1",
+          ">=1.0.0 <1.15.1"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.31.1",
+        "1.15.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 6.9,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/1c7f6d76e58359daddf38a6e636dd801ffd9c61b",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/b0c632f36a5ea2e73c9bdf3a54164a8ede925736",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-5c9x-8gcm-mpgx",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-05-05T14:13:38.544687Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.9,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-05-05T14:13:38.544687Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T14:13:38.544687Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T14:13:38.544687Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling due to the `data.pipe(req)` upload path in the HTTP adapter. An attacker can send a streamed request body larger than the configured `maxBodyLength` while `maxRedirects` is `0`, causing the client to transmit the oversized payload to the server instead of stopping at the limit. This lets a remote peer force excessive bandwidth and request processing on applications that rely on `maxBodyLength` to cap upload size, potentially exhausting resources and disrupting service.\n## Remediation\nUpgrade `axios` to version 0.31.1, 1.15.1 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/1c7f6d76e58359daddf38a6e636dd801ffd9c61b)\n- [GitHub Commit](https://github.com/axios/axios/commit/b0c632f36a5ea2e73c9bdf3a54164a8ede925736)\n- [Maintainer's Advisory](https://github.com/axios/axios/security/advisories/GHSA-5c9x-8gcm-mpgx)\n",
+      "epssDetails": {
+        "percentile": "0.15726",
+        "probability": "0.00051",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-42034"
+        ],
+        "CWE": [
+          "CWE-770"
+        ],
+        "GHSA": [
+          "GHSA-5c9x-8gcm-mpgx"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-26T08:55:36.902603Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-24T19:20:45Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-26T08:55:37.103582Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-05T14:13:38.544687Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-16298162",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.1",
+          ">=1.0.0 <1.15.1"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "0.31.1",
+        "1.15.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 6.9,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-vf2m-468p-8v99",
+          "title": "GitHub Advisory"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/b0c632f36a5ea2e73c9bdf3a54164a8ede925736",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/e8904af03385b040e53f1263a444e825db4335d9",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2026-05-05T14:13:07.460219Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.9,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-05-05T14:13:07.460219Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T14:13:07.460219Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T14:13:07.460219Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling through the HTTP response handling path in the `http.js` adapter. An attacker can force a client to accept and process a response body larger than `maxContentLength` by sending a streamed response with an oversized payload. This allows a remote server to bypass the configured response-size limit, causing the application to read and buffer more data than intended, potentially exhausting memory or stalling request processing.\n## Remediation\nUpgrade `axios` to version 0.31.1, 1.15.1 or higher.\n## References\n- [GitHub Advisory](https://github.com/axios/axios/security/advisories/GHSA-vf2m-468p-8v99)\n- [GitHub Commit](https://github.com/axios/axios/commit/b0c632f36a5ea2e73c9bdf3a54164a8ede925736)\n- [GitHub Commit](https://github.com/axios/axios/commit/e8904af03385b040e53f1263a444e825db4335d9)\n",
+      "epssDetails": {
+        "percentile": "0.15726",
+        "probability": "0.00051",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-42036"
+        ],
+        "CWE": [
+          "CWE-770"
+        ],
+        "GHSA": [
+          "GHSA-vf2m-468p-8v99"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-26T09:01:10.596081Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-24T19:20:03Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-26T09:01:10.812201Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-05T14:13:07.460219Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-16299478",
+      "title": "Insertion of Sensitive Information Into Sent Data",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N/E:P",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.1",
+          ">=1.0.0 <1.15.1"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.31.1",
+        "1.15.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/1728aa1b15b8857f970611fd8983c06b423fc486",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/b0c632f36a5ea2e73c9bdf3a54164a8ede925736",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-xx6v-rp6x-q39c",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "cvssV3BaseScore": 6.1,
+          "modificationTime": "2026-05-01T12:20:07.853062Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-05-01T12:20:07.853062Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-01T12:20:07.853062Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 6.1,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-01T12:20:07.853062Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Insertion of Sensitive Information Into Sent Data through the request configuration handling in the `adapters/xhr.js` adapter and `helpers/resolveConfig.jsΓÇÄ`. An attacker can force the `withXSRFToken` option to a truthy non-boolean value, or pollute `Object.prototype.withXSRFToken`, by supplying a crafted request config that causes the XSRF header to be sent on cross-origin requests. When `withXSRFToken` is treated as a generic truthy value, the same-origin check is bypassed, and the browser reads the XSRF cookie and attaches it to an attacker-controlled destination. This exposes the user's XSRF token to a cross-origin endpoint, potentially enabling request forgery against the victim's authenticated session.\n## Remediation\nUpgrade `axios` to version 0.31.1, 1.15.1 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/1728aa1b15b8857f970611fd8983c06b423fc486)\n- [GitHub Commit](https://github.com/axios/axios/commit/b0c632f36a5ea2e73c9bdf3a54164a8ede925736)\n- [Maintainer's Advisory](https://github.com/axios/axios/security/advisories/GHSA-xx6v-rp6x-q39c)\n",
+      "epssDetails": {
+        "percentile": "0.10082",
+        "probability": "0.00035",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-42042"
+        ],
+        "CWE": [
+          "CWE-183",
+          "CWE-201"
+        ],
+        "GHSA": [
+          "GHSA-xx6v-rp6x-q39c"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-26T09:10:46.858574Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-24T19:21:22Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-26T09:10:47.083596Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-01T12:20:07.853062Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-16299904",
+      "title": "Prototype Pollution",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "credit": [
+        "dolevmiz1"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.1",
+          ">=1.0.0 <1.15.1"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "0.31.1",
+        "1.15.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "critical",
+      "cvssScore": 9.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/17b90d0be692f1704e4623731163285b0480520f",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/b52187f4571b6b8663fed5904e3082ab30660364",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-pf86-5x62-jrwf",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "cvssV3BaseScore": 7.4,
+          "modificationTime": "2026-05-03T06:32:07.064243Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+          "assigner": "Snyk",
+          "severity": "critical",
+          "baseScore": 9.1,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-05-03T06:32:07.064243Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-03T06:32:07.064243Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.4,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-03T06:32:07.064243Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Prototype Pollution through the `mergeConfig` code path in the request configuration handling. An attacker can influence request behavior by supplying a crafted config object with inherited properties such as `transport`, `env`, `formSerializer`, or transform callbacks on `Object.prototype`, causing Axios to use attacker-controlled settings during request dispatch and form serialization. This can redirect requests, alter serialization and response handling, and break application logic that relies on trusted per-request configuration.\n\n## Details\n\nPrototype Pollution is a vulnerability affecting JavaScript. Prototype Pollution refers to the ability to inject properties into existing JavaScript language construct prototypes, such as objects. JavaScript allows all Object attributes to be altered, including their magical attributes such as `__proto__`, `constructor` and `prototype`. An attacker manipulates these attributes to overwrite, or pollute, a JavaScript application object prototype of the base object by injecting other values.  Properties on the `Object.prototype` are then inherited by all the JavaScript objects through the prototype chain. When that happens, this leads to either denial of service by triggering JavaScript exceptions, or it tampers with the application source code to force the code path that the attacker injects, thereby leading to remote code execution.\n\nThere are two main ways in which the pollution of prototypes occurs:\n\n-   Unsafe `Object` recursive merge\n    \n-   Property definition by path\n    \n\n### Unsafe Object recursive merge\n\nThe logic of a vulnerable recursive merge function follows the following high-level model:\n```\nmerge (target, source)\n\n  foreach property of source\n\n    if property exists and is an object on both the target and the source\n\n      merge(target[property], source[property])\n\n    else\n\n      target[property] = source[property]\n```\n<br>  \n\nWhen the source object contains a property named `__proto__` defined with `Object.defineProperty()` , the condition that checks if the property exists and is an object on both the target and the source passes and the merge recurses with the target, being the prototype of `Object` and the source of `Object` as defined by the attacker. Properties are then copied on the `Object` prototype.\n\nClone operations are a special sub-class of unsafe recursive merges, which occur when a recursive merge is conducted on an empty object: `merge({},source)`.\n\n`lodash` and `Hoek` are examples of libraries susceptible to recursive merge attacks.\n\n### Property definition by path\n\nThere are a few JavaScript libraries that use an API to define property values on an object based on a given path. The function that is generally affected contains this signature: `theFunction(object, path, value)`\n\nIf the attacker can control the value of ΓÇ£pathΓÇ¥, they can set this value to `__proto__.myValue`. `myValue` is then assigned to the prototype of the class of the object.\n\n## Types of attacks\n\nThere are a few methods by which Prototype Pollution can be manipulated:\n\n| Type |Origin  |Short description |\n|--|--|--|\n| **Denial of service (DoS)**|Client  |This is the most likely attack. <br>DoS occurs when `Object` holds generic functions that are implicitly called for various operations (for example, `toString` and `valueOf`). <br> The attacker pollutes `Object.prototype.someattr` and alters its state to an unexpected value such as `Int` or `Object`. In this case, the code fails and is likely to cause a denial of service.  <br>**For example:** if an attacker pollutes `Object.prototype.toString` by defining it as an integer, if the codebase at any point was reliant on `someobject.toString()` it would fail. |\n |**Remote Code Execution**|Client|Remote code execution is generally only possible in cases where the codebase evaluates a specific attribute of an object, and then executes that evaluation.<br>**For example:** `eval(someobject.someattr)`. In this case, if the attacker pollutes `Object.prototype.someattr` they are likely to be able to leverage this in order to execute code.|\n|**Property Injection**|Client|The attacker pollutes properties that the codebase relies on for their informative value, including security properties such as cookies or tokens.<br>  **For example:** if a codebase checks privileges for `someuser.isAdmin`, then when the attacker pollutes `Object.prototype.isAdmin` and sets it to equal `true`, they can then achieve admin privileges.|\n\n## Affected environments\n\nThe following environments are susceptible to a Prototype Pollution attack:\n\n-   Application server\n    \n-   Web server\n\n-   Web browser\n    \n\n## How to prevent\n\n1.  Freeze the prototypeΓÇö use `Object.freeze (Object.prototype)`.\n    \n2.  Require schema validation of JSON input.\n    \n3.  Avoid using unsafe recursive merge functions.\n    \n4.  Consider using objects without prototypes (for example, `Object.create(null)`), breaking the prototype chain and preventing pollution.\n    \n5.  As a best practice use `Map` instead of `Object`.\n\n### For more information on this vulnerability type:\n\n[Arteau, Olivier. ΓÇ£JavaScript prototype pollution attack in NodeJS application.ΓÇ¥ GitHub, 26 May 2018](https://github.com/HoLyVieR/prototype-pollution-nsec18/blob/master/paper/JavaScript_prototype_pollution_attack_in_NodeJS.pdf)\n\n## Remediation\nUpgrade `axios` to version 0.31.1, 1.15.1 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/17b90d0be692f1704e4623731163285b0480520f)\n- [GitHub Commit](https://github.com/axios/axios/commit/b52187f4571b6b8663fed5904e3082ab30660364)\n- [Maintainer's Advisory](https://github.com/axios/axios/security/advisories/GHSA-pf86-5x62-jrwf)\n",
+      "epssDetails": {
+        "percentile": "0.27853",
+        "probability": "0.00103",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-42033"
+        ],
+        "CWE": [
+          "CWE-1321"
+        ],
+        "GHSA": [
+          "GHSA-pf86-5x62-jrwf"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-26T09:48:07.265085Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-24T19:21:05Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-26T09:48:07.478558Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-03T06:32:07.064243Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "critical",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-16299923",
+      "title": "Uncontrolled Recursion",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P",
+      "credit": [
+        "fg0x0"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.1",
+          ">=1.0.0 <1.15.1"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.31.1",
+        "1.15.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/85132ffba1a77609ea5d101c8a413dea7174932f",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/b0c632f36a5ea2e73c9bdf3a54164a8ede925736",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-62hf-57xw-28j9",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-04-28T01:14:59.362352Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2026-05-05T14:11:39.866460Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-05-05T14:11:39.866460Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T14:11:39.866460Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "NVD",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-28T01:14:59.362352Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-05T14:11:39.866460Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Uncontrolled Recursion through the `toFormData` recursive serializer in `lib/helpers/toFormData.js`. An attacker can crash a process by supplying a deeply nested object as request `data` or `params`, causing unbounded recursion and a call-stack overflow during multipart/form-data or query-string serialization.\n## Remediation\nUpgrade `axios` to version 0.31.1, 1.15.1 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/85132ffba1a77609ea5d101c8a413dea7174932f)\n- [GitHub Commit](https://github.com/axios/axios/commit/b0c632f36a5ea2e73c9bdf3a54164a8ede925736)\n- [Maintainer's Advisory](https://github.com/axios/axios/security/advisories/GHSA-62hf-57xw-28j9)\n",
+      "epssDetails": {
+        "percentile": "0.16179",
+        "probability": "0.00052",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-42039"
+        ],
+        "CWE": [
+          "CWE-674"
+        ],
+        "GHSA": [
+          "GHSA-62hf-57xw-28j9"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-26T10:02:27.794009Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-24T19:18:27Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-26T10:02:27.979407Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-05T14:11:39.866460Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-16299925",
+      "title": "Prototype Pollution",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N/E:P",
+      "credit": [
+        "August829"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.31.1",
+          ">=1.0.0 <1.15.1"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.31.1",
+        "1.15.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 6.3,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/42eb721eebc95cfded8d6c70cf62f3fbe83f3246",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/b0c632f36a5ea2e73c9bdf3a54164a8ede925736",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/security/advisories/GHSA-w9j2-pvgh-6h63",
+          "title": "Maintainer's Advisory"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "cvssV3BaseScore": 6.5,
+          "modificationTime": "2026-04-28T01:15:12.046252Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+          "cvssV3BaseScore": 8.2,
+          "modificationTime": "2026-05-06T05:28:00.043814Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.3,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-05-06T05:28:00.043814Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 4.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-06T05:28:00.043814Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 6.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-28T01:15:12.046252Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 8.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-05-06T05:28:00.043814Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Prototype Pollution via the `mergeDirectKeys` function in `mergeConfig`. An attacker can force a request configuration to inherit attacker-controlled properties by supplying a polluted `Object.prototype`, causing Axios to read inherited values, such as `validateStatus`, during config merging.\r\nThis lets a malicious page or library alter how responses are handled, including making 4xx and 5xx responses be treated as successful and bypassing normal error handling in applications that rely on Axios defaults.\n\n## Details\n\nPrototype Pollution is a vulnerability affecting JavaScript. Prototype Pollution refers to the ability to inject properties into existing JavaScript language construct prototypes, such as objects. JavaScript allows all Object attributes to be altered, including their magical attributes such as `__proto__`, `constructor` and `prototype`. An attacker manipulates these attributes to overwrite, or pollute, a JavaScript application object prototype of the base object by injecting other values.  Properties on the `Object.prototype` are then inherited by all the JavaScript objects through the prototype chain. When that happens, this leads to either denial of service by triggering JavaScript exceptions, or it tampers with the application source code to force the code path that the attacker injects, thereby leading to remote code execution.\n\nThere are two main ways in which the pollution of prototypes occurs:\n\n-   Unsafe `Object` recursive merge\n    \n-   Property definition by path\n    \n\n### Unsafe Object recursive merge\n\nThe logic of a vulnerable recursive merge function follows the following high-level model:\n```\nmerge (target, source)\n\n  foreach property of source\n\n    if property exists and is an object on both the target and the source\n\n      merge(target[property], source[property])\n\n    else\n\n      target[property] = source[property]\n```\n<br>  \n\nWhen the source object contains a property named `__proto__` defined with `Object.defineProperty()` , the condition that checks if the property exists and is an object on both the target and the source passes and the merge recurses with the target, being the prototype of `Object` and the source of `Object` as defined by the attacker. Properties are then copied on the `Object` prototype.\n\nClone operations are a special sub-class of unsafe recursive merges, which occur when a recursive merge is conducted on an empty object: `merge({},source)`.\n\n`lodash` and `Hoek` are examples of libraries susceptible to recursive merge attacks.\n\n### Property definition by path\n\nThere are a few JavaScript libraries that use an API to define property values on an object based on a given path. The function that is generally affected contains this signature: `theFunction(object, path, value)`\n\nIf the attacker can control the value of ΓÇ£pathΓÇ¥, they can set this value to `__proto__.myValue`. `myValue` is then assigned to the prototype of the class of the object.\n\n## Types of attacks\n\nThere are a few methods by which Prototype Pollution can be manipulated:\n\n| Type |Origin  |Short description |\n|--|--|--|\n| **Denial of service (DoS)**|Client  |This is the most likely attack. <br>DoS occurs when `Object` holds generic functions that are implicitly called for various operations (for example, `toString` and `valueOf`). <br> The attacker pollutes `Object.prototype.someattr` and alters its state to an unexpected value such as `Int` or `Object`. In this case, the code fails and is likely to cause a denial of service.  <br>**For example:** if an attacker pollutes `Object.prototype.toString` by defining it as an integer, if the codebase at any point was reliant on `someobject.toString()` it would fail. |\n |**Remote Code Execution**|Client|Remote code execution is generally only possible in cases where the codebase evaluates a specific attribute of an object, and then executes that evaluation.<br>**For example:** `eval(someobject.someattr)`. In this case, if the attacker pollutes `Object.prototype.someattr` they are likely to be able to leverage this in order to execute code.|\n|**Property Injection**|Client|The attacker pollutes properties that the codebase relies on for their informative value, including security properties such as cookies or tokens.<br>  **For example:** if a codebase checks privileges for `someuser.isAdmin`, then when the attacker pollutes `Object.prototype.isAdmin` and sets it to equal `true`, they can then achieve admin privileges.|\n\n## Affected environments\n\nThe following environments are susceptible to a Prototype Pollution attack:\n\n-   Application server\n    \n-   Web server\n\n-   Web browser\n    \n\n## How to prevent\n\n1.  Freeze the prototypeΓÇö use `Object.freeze (Object.prototype)`.\n    \n2.  Require schema validation of JSON input.\n    \n3.  Avoid using unsafe recursive merge functions.\n    \n4.  Consider using objects without prototypes (for example, `Object.create(null)`), breaking the prototype chain and preventing pollution.\n    \n5.  As a best practice use `Map` instead of `Object`.\n\n### For more information on this vulnerability type:\n\n[Arteau, Olivier. ΓÇ£JavaScript prototype pollution attack in NodeJS application.ΓÇ¥ GitHub, 26 May 2018](https://github.com/HoLyVieR/prototype-pollution-nsec18/blob/master/paper/JavaScript_prototype_pollution_attack_in_NodeJS.pdf)\n\n## Remediation\nUpgrade `axios` to version 0.31.1, 1.15.1 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/42eb721eebc95cfded8d6c70cf62f3fbe83f3246)\n- [GitHub Commit](https://github.com/axios/axios/commit/b0c632f36a5ea2e73c9bdf3a54164a8ede925736)\n- [Maintainer's Advisory](https://github.com/axios/axios/security/advisories/GHSA-w9j2-pvgh-6h63)\n",
+      "epssDetails": {
+        "percentile": "0.24963",
+        "probability": "0.00088",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2026-42041"
+        ],
+        "CWE": [
+          "CWE-1321"
+        ],
+        "GHSA": [
+          "GHSA-w9j2-pvgh-6h63"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2026-04-26T10:07:00.258642Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2026-04-24T19:21:23Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2026-04-26T10:07:00.453026Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-05-06T05:28:00.043814Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.31.1"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-6032459",
+      "title": "Cross-site Request Forgery (CSRF)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N/E:P",
+      "credit": [
+        "Valentin Panov"
+      ],
+      "semver": {
+        "vulnerable": [
+          ">=0.8.1 <0.28.0",
+          ">=1.0.0 <1.6.0"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.28.0",
+        "1.6.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "high",
+      "cvssScore": 7.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/96ee232bd3ee4de2e657333d4d2191cd389e14d0",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/issues/6006",
+          "title": "GitHub Issue"
+        },
+        {
+          "url": "https://github.com/axios/axios/issues/6022",
+          "title": "GitHub Issue"
+        },
+        {
+          "url": "https://github.com/axios/axios/pull/6028",
+          "title": "GitHub PR"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.5,
+          "modificationTime": "2024-03-11T09:49:51.884876Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.5,
+          "modificationTime": "2024-03-11T09:54:05.433118Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.1,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-10-22T12:31:10.466679Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 6.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-03-11T09:49:51.884876Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 6.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-03-11T09:54:05.433118Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Cross-site Request Forgery (CSRF) due to inserting the `X-XSRF-TOKEN` header using the secret `XSRF-TOKEN` cookie value in all requests to any server when the `XSRF-TOKEN`0 cookie is available, and the `withCredentials` setting is turned on. If a malicious user manages to obtain this value, it can potentially lead to the XSRF defence mechanism bypass.\r\n\r\n\r\n\r\n## Workaround\r\n\r\nUsers should change the default `XSRF-TOKEN` cookie name in the Axios configuration and manually include the corresponding header only in the specific places where it's necessary.\n## Remediation\nUpgrade `axios` to version 0.28.0, 1.6.0 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/96ee232bd3ee4de2e657333d4d2191cd389e14d0)\n- [GitHub Issue](https://github.com/axios/axios/issues/6006)\n- [GitHub Issue](https://github.com/axios/axios/issues/6022)\n- [GitHub PR](https://github.com/axios/axios/pull/6028)\n",
+      "epssDetails": {
+        "percentile": "0.36476",
+        "probability": "0.00161",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2023-45857"
+        ],
+        "CWE": [
+          "CWE-352"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2023-10-25T07:24:40.661649Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2023-10-23T12:48:11Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2023-10-25T07:24:40.876294Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-10-22T12:31:10.466679Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.28.0"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-6124857",
+      "title": "Regular Expression Denial of Service (ReDoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P",
+      "credit": [
+        "endansdto"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.29.0",
+          ">=1.0.0-alpha.1 <1.6.3"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.29.0",
+        "1.6.3"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 6.9,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/4840cb2bd09b62aaa8b7cc9d6ad5a123f666972b",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/5e7ad38fb0f819fceb19fb2ee5d5d38f56aa837d",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/issues/6131",
+          "title": "GitHub Issue"
+        },
+        {
+          "url": "https://github.com/axios/axios/pull/6132",
+          "title": "GitHub PR"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.9,
+          "cvssVersion": "4.0",
+          "modificationTime": "2026-04-14T12:09:28.429260Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2026-04-14T12:09:28.429260Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS). An attacker can deplete system resources by providing a manipulated string as input to the format method, causing the regular expression to exhibit a time complexity of `O(n^2)`. This makes the server to become unable to provide normal service due to the excessive cost and time wasted in processing vulnerable regular expressions.\n## PoC\n```js\r\nconst axios = require('axios');\r\n\r\nconsole.time('t1');\r\naxios.defaults.baseURL = '/'.repeat(10000) + 'a/';\r\naxios.get('/a').then(()=>{}).catch(()=>{});\r\nconsole.timeEnd('t1');\r\n\r\nconsole.time('t2');\r\naxios.defaults.baseURL = '/'.repeat(100000) + 'a/';\r\naxios.get('/a').then(()=>{}).catch(()=>{});\r\nconsole.timeEnd('t2');\r\n\r\n\r\n/* stdout\r\nt1: 60.826ms\r\nt2: 5.826s\r\n*/\r\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLetΓÇÖs take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesnΓÇÖt match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `axios` to version 0.29.0, 1.6.3 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/4840cb2bd09b62aaa8b7cc9d6ad5a123f666972b)\n- [GitHub Commit](https://github.com/axios/axios/commit/5e7ad38fb0f819fceb19fb2ee5d5d38f56aa837d)\n- [GitHub Issue](https://github.com/axios/axios/issues/6131)\n- [GitHub PR](https://github.com/axios/axios/pull/6132)\n",
+      "epssDetails": null,
+      "identifiers": {
+        "CVE": [],
+        "CWE": [
+          "CWE-1333"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2023-12-14T07:39:10.453351Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2023-12-14T02:27:56Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2023-12-14T09:43:10.972946Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2026-04-14T12:09:28.429260Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.29.0"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-9292519",
+      "title": "Server-side Request Forgery (SSRF)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N/E:P",
+      "credit": [
+        "David Arien",
+        "Tsubasa Irisawa"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.30.0",
+          ">=1.0.0 <1.8.2"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "0.30.0",
+        "1.8.2"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 6.2,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/02c3c69ced0f8fd86407c23203835892313d7fde",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/fb8eec214ce7744b5ca787f2c3b8339b2f54b00f",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://gist.github.com/david-arien/25e1cab8fd4f02eff98e244d8be693f4",
+          "title": "GitHub Gist"
+        },
+        {
+          "url": "https://github.com/axios/axios/issues/6806",
+          "title": "GitHub Issue"
+        },
+        {
+          "url": "https://github.com/axios/axios/pull/6795",
+          "title": "GitHub PR"
+        },
+        {
+          "url": "https://github.com/axios/axios/pull/6810",
+          "title": "GitHub PR"
+        },
+        {
+          "url": "https://github.com/axios/axios/blob/72acf759373ef4e211d5299818d19e50e08c02f8/lib/adapters/http.js%23L231",
+          "title": "Vulnerable Code"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2025-04-15T11:31:33.885998Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2025-03-11T14:59:41.921177Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2025-11-26T01:15:46.930280Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.2,
+          "cvssVersion": "4.0",
+          "modificationTime": "2025-11-26T01:15:46.930280Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2025-11-26T01:15:46.930280Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "assigner": "SUSE",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2025-04-15T11:31:33.885998Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2025-03-11T14:59:41.921177Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 5.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2025-11-26T01:15:46.930280Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Server-side Request Forgery (SSRF) due to the `allowAbsoluteUrls` attribute being ignored in the call to the `buildFullPath` function from the HTTP adapter. An attacker could launch SSRF attacks or exfiltrate sensitive data by tricking applications into sending requests to malicious endpoints.\n## PoC\n```js\r\nconst axios = require('axios');\r\nconst client = axios.create({baseURL: 'http://example.com/', allowAbsoluteUrls: false});\r\nclient.get('http://evil.com');\r\n```\n## Remediation\nUpgrade `axios` to version 0.30.0, 1.8.2 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/02c3c69ced0f8fd86407c23203835892313d7fde)\n- [GitHub Commit](https://github.com/axios/axios/commit/fb8eec214ce7744b5ca787f2c3b8339b2f54b00f)\n- [GitHub Gist](https://gist.github.com/david-arien/25e1cab8fd4f02eff98e244d8be693f4)\n- [GitHub Issue](https://github.com/axios/axios/issues/6806)\n- [GitHub PR](https://github.com/axios/axios/pull/6795)\n- [GitHub PR](https://github.com/axios/axios/pull/6810)\n- [Vulnerable Code](https://github.com/axios/axios/blob/72acf759373ef4e211d5299818d19e50e08c02f8/lib/adapters/http.js#L231)\n",
+      "epssDetails": {
+        "percentile": "0.43503",
+        "probability": "0.00212",
+        "modelVersion": "v2025.03.14"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2025-27152"
+        ],
+        "CWE": [
+          "CWE-918"
+        ],
+        "GHSA": [
+          "GHSA-jr5f-v2jv-69x6"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2025-03-06T08:48:03.513476Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2025-03-01T00:03:58Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2025-03-07T08:45:27.214989Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2025-11-26T01:15:46.930280Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.30.0"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    },
+    {
+      "id": "SNYK-JS-AXIOS-9403194",
+      "title": "Server-side Request Forgery (SSRF)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "<0.30.0",
+          ">=1.0.0 <1.8.3"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "0.30.0",
+        "1.8.3"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "js",
+      "severity": "medium",
+      "cvssScore": 6.2,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "axios",
+      "references": [
+        {
+          "url": "https://github.com/axios/axios/commit/10fa70ef14fe39558b15a179f0e82f5f5e5d11b2",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/commit/c01062253a780bca049e5fabe95d26fe441a8a0f",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/axios/axios/issues/6821",
+          "title": "GitHub Issue"
+        },
+        {
+          "url": "https://github.com/axios/axios/pull/6818",
+          "title": "GitHub PR"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.2,
+          "cvssVersion": "4.0",
+          "modificationTime": "2025-03-27T08:58:29.837086Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2025-03-27T08:58:29.837086Z"
+        }
+      ],
+      "description": "## Overview\n[axios](https://www.npmjs.com/package/axios) is a promise-based HTTP client for the browser and Node.js.\n\nAffected versions of this package are vulnerable to Server-side Request Forgery (SSRF) due to not setting `allowAbsoluteUrls` to `false` by default when processing a requested URL in `buildFullPath()`. It may not be obvious that this value is being used with the less safe default, and URLs that are expected to be blocked may be accepted. This is a bypass of the fix for the vulnerability described in [CVE-2025-27152](https://security.snyk.io/vuln/SNYK-JS-AXIOS-9292519).\n## Remediation\nUpgrade `axios` to version 0.30.0, 1.8.3 or higher.\n## References\n- [GitHub Commit](https://github.com/axios/axios/commit/10fa70ef14fe39558b15a179f0e82f5f5e5d11b2)\n- [GitHub Commit](https://github.com/axios/axios/commit/c01062253a780bca049e5fabe95d26fe441a8a0f)\n- [GitHub Issue](https://github.com/axios/axios/issues/6821)\n- [GitHub PR](https://github.com/axios/axios/pull/6818)\n",
+      "epssDetails": null,
+      "identifiers": {
+        "CVE": [],
+        "CWE": [
+          "CWE-918"
+        ]
+      },
+      "packageName": "axios",
+      "proprietary": false,
+      "creationTime": "2025-03-13T10:14:29.648268Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2025-03-11T11:27:54Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "npm",
+      "publicationTime": "2025-03-23T20:23:34.389613Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2025-03-27T08:58:29.837086Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "vulnerable-feedback-frontend@1.0.0",
+        "axios@0.21.1"
+      ],
+      "upgradePath": [
+        false,
+        "axios@0.30.0"
+      ],
+      "isUpgradable": true,
+      "isPatchable": false,
+      "name": "axios",
+      "version": "0.21.1"
+    }
+  ],
+  "ok": false,
+  "dependencyCount": 53,
+  "org": "umkhan23",
+  "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.25.1\nignore: {}\npatch: {}\n",
+  "isPrivate": true,
+  "licensesPolicy": {
+    "severities": {},
+    "orgLicenseRules": {
+      "AGPL-1.0": {
+        "licenseType": "AGPL-1.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "AGPL-3.0": {
+        "licenseType": "AGPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "Artistic-1.0": {
+        "licenseType": "Artistic-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "Artistic-2.0": {
+        "licenseType": "Artistic-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CDDL-1.0": {
+        "licenseType": "CDDL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CPOL-1.02": {
+        "licenseType": "CPOL-1.02",
+        "severity": "high",
+        "instructions": ""
+      },
+      "EPL-1.0": {
+        "licenseType": "EPL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "GPL-2.0": {
+        "licenseType": "GPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "GPL-3.0": {
+        "licenseType": "GPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "LGPL-2.0": {
+        "licenseType": "LGPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-2.1": {
+        "licenseType": "LGPL-2.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-3.0": {
+        "licenseType": "LGPL-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-1.1": {
+        "licenseType": "MPL-1.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-2.0": {
+        "licenseType": "MPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MS-RL": {
+        "licenseType": "MS-RL",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "SimPL-2.0": {
+        "licenseType": "SimPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      }
+    }
+  },
+  "packageManager": "npm",
+  "ignoreSettings": {
+    "adminOnly": false,
+    "reasonRequired": false,
+    "disregardFilesystemIgnores": false
+  },
+  "summary": "18 vulnerable dependency paths",
+  "remediation": {
+    "unresolved": [],
+    "upgrade": {
+      "axios@0.21.1": {
+        "upgradeTo": "axios@0.31.1",
+        "upgrades": [
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1",
+          "axios@0.21.1"
+        ],
+        "vulns": [
+          "SNYK-JS-AXIOS-16298055",
+          "SNYK-JS-AXIOS-16298058",
+          "SNYK-JS-AXIOS-16298095",
+          "SNYK-JS-AXIOS-16298130",
+          "SNYK-JS-AXIOS-16298162",
+          "SNYK-JS-AXIOS-16299478",
+          "SNYK-JS-AXIOS-16299904",
+          "SNYK-JS-AXIOS-16299923",
+          "SNYK-JS-AXIOS-16299925",
+          "SNYK-JS-AXIOS-15965856",
+          "SNYK-JS-AXIOS-15969258",
+          "SNYK-JS-AXIOS-15252993",
+          "SNYK-JS-AXIOS-12613773",
+          "SNYK-JS-AXIOS-9292519",
+          "SNYK-JS-AXIOS-9403194",
+          "SNYK-JS-AXIOS-6124857",
+          "SNYK-JS-AXIOS-6032459",
+          "SNYK-JS-AXIOS-1579269"
+        ]
+      }
+    },
+    "patch": {},
+    "ignore": {},
+    "pin": {}
+  },
+  "filesystemPolicy": false,
+  "filtered": {
+    "ignore": [],
+    "patch": []
+  },
+  "uniqueCount": 18,
+  "projectName": "vulnerable-feedback-frontend",
+  "displayTargetFile": "package-lock.json",
+  "hasUnknownVersions": false,
+  "path": "C:\\Users\\Usman\\Documents\\GitHub\\customer-feedback-app\\frontend"
+}
