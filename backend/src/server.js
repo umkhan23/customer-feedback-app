@@ -36,10 +36,10 @@ app.get('/api/health', async (_req, res) => {
 });
 
 app.post('/api/feedback', async (req, res) => {
-  const { name, email, message, stars } = req.body;
+  const { name, email, message, stars, age } = req.body;
 
-  if (!name || !email || !message || stars === undefined) {
-    return res.status(400).json({ error: 'name, email, message, and stars are required' });
+  if (!name || !email || !message || stars === undefined || age === undefined) {
+    return res.status(400).json({ error: 'name, email, message, stars, and age are required' });
   }
 
   const starsNum = parseInt(stars, 10);
@@ -47,9 +47,14 @@ app.post('/api/feedback', async (req, res) => {
     return res.status(400).json({ error: 'stars must be an integer between 1 and 5' });
   }
 
+  const ageNum = parseInt(age, 10);
+  if (isNaN(ageNum) || ageNum < 1 || ageNum > 120) {
+    return res.status(400).json({ error: 'age must be an integer between 1 and 120' });
+  }
+
   try {
-    const query = `INSERT INTO feedback (name, email, message, stars) VALUES ($1, $2, $3, $4) RETURNING *`;
-    const result = await pool.query(query, [name, email, message, starsNum]);
+    const query = `INSERT INTO feedback (name, email, message, stars, age) VALUES ($1, $2, $3, $4, $5) RETURNING *`;
+    const result = await pool.query(query, [name, email, message, starsNum, ageNum]);
     res.status(201).json({ saved: true, feedback: result.rows[0] });
   } catch (err) {
     res.status(500).json({ error: 'Failed to save feedback', details: err.message });
@@ -95,7 +100,7 @@ app.get('/api/admin/feedback', requireAdmin, async (req, res) => {
 
   try {
     const query = `
-      SELECT id, name, email, message, stars, created_at
+      SELECT id, name, email, message, stars, age, created_at
       FROM feedback
       WHERE name ILIKE $1
          OR email ILIKE $1

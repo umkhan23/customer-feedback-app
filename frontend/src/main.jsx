@@ -6,7 +6,7 @@ import './styles.css';
 const API_BASE = 'http://localhost:3001/api';
 
 function PublicFeedbackForm({ onGoAdmin }) {
-  const [form, setForm] = useState({ name: '', email: '', message: '', stars: 0 });
+  const [form, setForm] = useState({ name: '', email: '', age: '', message: '', stars: 0 });
   const [status, setStatus] = useState(null);
   const [preview, setPreview] = useState('');
 
@@ -21,11 +21,18 @@ function PublicFeedbackForm({ onGoAdmin }) {
       setStatus({ type: 'error', text: 'Please select a star rating.' });
       return;
     }
+
+    const ageNum = parseInt(form.age, 10);
+    if (!form.age || isNaN(ageNum) || ageNum < 1 || ageNum > 120) {
+      setStatus({ type: 'error', text: 'Please enter a valid age.' });
+      return;
+    }
+
     setStatus({ type: 'loading', text: 'Saving your feedback...' });
     try {
       await axios.post(`${API_BASE}/feedback`, form);
       setStatus({ type: 'success', text: 'Thank you — your feedback has been recorded.' });
-      setForm({ name: '', email: '', message: '', stars: 0 });
+      setForm({ name: '', email: '', age: '', message: '', stars: 0 });
       setPreview('');
     } catch (err) {
       setStatus({ type: 'error', text: err.response?.data?.details || 'Unable to save feedback.' });
@@ -84,6 +91,18 @@ function PublicFeedbackForm({ onGoAdmin }) {
           <label>
             Email
             <input type="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="jordan@example.com" required />
+          </label>
+          <label>
+            Age
+            <input
+              type="number"
+              value={form.age}
+              min="1"
+              max="120"
+              onChange={(e) => update('age', e.target.value)}
+              placeholder="29"
+              required
+            />
           </label>
           <label>
             How would you rate your experience?
