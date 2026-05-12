@@ -36,17 +36,20 @@ app.get('/api/health', async (_req, res) => {
 });
 
 app.post('/api/feedback', async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, message, stars } = req.body;
 
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: 'name, email, and message are required' });
+  if (!name || !email || !message || stars === undefined) {
+    return res.status(400).json({ error: 'name, email, message, and stars are required' });
+  }
+
+  const starsNum = parseInt(stars, 10);
+  if (isNaN(starsNum) || starsNum < 1 || starsNum > 5) {
+    return res.status(400).json({ error: 'stars must be an integer between 1 and 5' });
   }
 
   try {
-    // Intentionally vulnerable: raw string interpolation allows SQL injection if request is tampered with.
-    // Kept for Snyk Code / interview demo. Secure version would use parameterized queries.
-    const query = `INSERT INTO feedback (name, email, message) VALUES ('${name}', '${email}', '${message}') RETURNING *`;
-    const result = await pool.query(query);
+    const query = `INSERT INTO feedback (name, email, message, stars) VALUES ($1, $2, $3, $4) RETURNING *`;
+    const result = await pool.query(query, [name, email, message, starsNum]);
     res.status(201).json({ saved: true, feedback: result.rows[0] });
   } catch (err) {
     res.status(500).json({ error: 'Failed to save feedback', details: err.message });
@@ -82,18 +85,24 @@ app.get('/api/admin/feedback', requireAdmin, async (req, res) => {
   const sort = req.query.sort || 'created_at';
   const direction = req.query.direction || 'DESC';
 
+  if (!['created_at', 'name', 'email', 'stars'].includes(sort)) {
+    return res.status(400).json({ error: 'Invalid sort field' });
+  }
+  
+  if (!['DESC', 'ASC'].includes(direction.toUpperCase())) {
+    return res.status(400).json({ error: 'Invalid sort direction' });
+  }
+
   try {
-    // Intentionally vulnerable: search, sort, and direction are concatenated into SQL.
-    // This exists so Snyk and the interview panel have a realistic admin data-access finding to discuss.
     const query = `
-      SELECT id, name, email, message, created_at
+      SELECT id, name, email, message, stars, created_at
       FROM feedback
-      WHERE name ILIKE '%${search}%'
-         OR email ILIKE '%${search}%'
-         OR message ILIKE '%${search}%'
+      WHERE name ILIKE $1
+         OR email ILIKE $1
+         OR message ILIKE $1
       ORDER BY ${sort} ${direction}
     `;
-    const result = await pool.query(query);
+    const result = await pool.query(query, [`%${search}%`]);
     res.json({ count: result.rows.length, feedback: result.rows });
   } catch (err) {
     res.status(500).json({ error: 'Failed to load feedback', details: err.message });
